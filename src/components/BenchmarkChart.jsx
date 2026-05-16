@@ -22,17 +22,25 @@ export default function BenchmarkChart({ chart }) {
   const [activePoint, setActivePoint] = useState(null)
   const width = 1120
   const height = 560
-  const pad = { top: 74, right: 44, bottom: 72, left: 72 }
+  const pad = { top: 74, right: 64, bottom: 96, left: 92 }
 
   const prepared = useMemo(() => {
     if (!chart) return null
+    const firstSeries = chart.series.manual || chart.series.before
+    const secondSeries = chart.series.ai || chart.series.after
+
+    if (!firstSeries || !secondSeries) return null
+
     return {
-      manual: makePath(chart.series.manual, width, height, pad),
-      ai: makePath(chart.series.ai, width, height, pad),
+      manual: makePath(firstSeries, width, height, pad),
+      ai: makePath(secondSeries, width, height, pad),
     }
   }, [chart])
 
   if (!chart || !prepared) return null
+
+  const firstLabel = chart.series.manual ? 'MANUAL PHASE' : 'BEFORE'
+  const secondLabel = chart.series.ai ? 'AI AGENT PHASE' : 'AFTER'
 
   const yTicks = [0, 20, 40, 60, 80, 100, 110]
   const plotBottom = height - pad.bottom
@@ -67,11 +75,15 @@ export default function BenchmarkChart({ chart }) {
 
           <g className="font-body text-[13px] sm:text-[15px] font-semibold">
             <circle cx="36" cy="30" r="8" fill={colors.manual} />
-            <text x="54" y="36" fill={colors.manual}>MANUAL PHASE</text>
+            <text x="54" y="36" fill={colors.manual}>{firstLabel}</text>
             <circle cx="250" cy="30" r="8" fill={colors.ai} />
-            <text x="268" y="36" fill={colors.ai}>AI AGENT PHASE</text>
-            <rect x="450" y="15" width="210" height="30" rx="6" fill="#123f66" />
-            <text x="468" y="36" fill="#fff">□ AI AGENT LAUNCH</text>
+            <text x="268" y="36" fill={colors.ai}>{secondLabel}</text>
+            {chart.series.manual && (
+              <>
+                <rect x="450" y="15" width="210" height="30" rx="6" fill="#123f66" />
+                <text x="468" y="36" fill="#fff">AI AGENT LAUNCH</text>
+              </>
+            )}
           </g>
 
           {yTicks.map(tick => {
@@ -91,7 +103,7 @@ export default function BenchmarkChart({ chart }) {
               <line x1={x} x2={x} y1={pad.top} y2={plotBottom} stroke={colors.grid} />
               <text
                 x={x}
-                y={height - 34}
+                y={height - 44}
                 textAnchor="middle"
                 fill={colors.text}
                 className={`text-[11px] sm:text-[14px] ${chart.labels.length > 8 && index % 2 === 1 ? 'hidden sm:block' : ''}`}

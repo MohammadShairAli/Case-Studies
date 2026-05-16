@@ -11,7 +11,7 @@
 import project1 from './project1';
 import project2 from './project2';
 import project3 from './project3';
-// import project4 from './project4'; // ← uncomment when ready
+import project4 from './project4'; // ← uncomment when ready
 
 const projects = [
   {
@@ -26,7 +26,7 @@ const projects = [
     slug: 'voice-agent-restaurant',
     data: project3,
   },
-  // { slug: 'project-4-slug', data: project4 }, // ← add next project here
+  { slug: '3d-configurator', data: project4 }, // ← add next project here
 ];
 
 export default projects;
