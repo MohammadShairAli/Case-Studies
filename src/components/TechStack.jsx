@@ -1,3 +1,8 @@
+const customIcons = {
+  qrcode:
+    'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%23111827" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"%3E%3Crect x="3" y="3" width="7" height="7" rx="1"/%3E%3Crect x="14" y="3" width="7" height="7" rx="1"/%3E%3Crect x="3" y="14" width="7" height="7" rx="1"/%3E%3Cpath d="M14 14h2v2h-2zM18 14h3M14 18h3M19 18h2v3h-3M14 21h1"/%3E%3C/svg%3E',
+}
+
 export default function TechStack({ techStack }) {
   const { sectionLabel, heading, items } = techStack
 
@@ -37,7 +42,7 @@ export default function TechStack({ techStack }) {
                   transition-transform duration-300
                   group-hover:scale-110
                 "
-                src={`https://cdn.simpleicons.org/${t.icon}`}
+                src={customIcons[t.icon] || `https://cdn.simpleicons.org/${t.icon}`}
                 alt={t.name}
                 onError={(e) => {
                   e.target.src = 'https://cdn-icons-png.flaticon.com/512/2721/2721293.png'
