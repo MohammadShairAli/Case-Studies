@@ -2,13 +2,13 @@
 // PROJECT DATA — Project 4: BMW X7 3D Configurator
 // ============================================================
 
-const project4 = {
+const project5 = {
 
   meta: {
     title: "BMW X7 3D Configurator",
     subtitle: "Case Study · Interactive 3D Customisation & AR Platform",
     browserTabTitle: "Case Study | BMW X7 3D Configurator",
-    favicon: "/images/p4/image1.png",
+    favicon: "/images/p5/image1.png",
   },
 
   hero: {
@@ -16,7 +16,7 @@ const project4 = {
     heading: "BMW X7 3D Configurator",
     subheading: "Interactive Customisation & AR Platform",
     description: "The BMW X7 3D Configurator is a fully browser-based interactive product experience built on Three.js and WebGL. Customers configure a photorealistic 3D model of the BMW X7 in real time switching body colours, wheel styles, and seat materials then visualise their personalised build in Augmented Reality directly from their browser, with no app download required.",
-    bannerImage: "/images/p4/image1.png",
+    bannerImage: "/images/p5/image1.png",
     stats: [
       { value: "<1s",    label: "Render Latency" },
       { value: "9",      label: "Car Models" },
@@ -30,10 +30,10 @@ const project4 = {
     sectionLabel: "Performance Benchmarks",
     heading: "Static Catalogue vs 3D Configurator",
     description: "Deploying the interactive 3D Configurator in place of a static image catalogue delivered measurable, significant improvements across every key customer engagement and conversion metric.",
-    chartImage: "/images/p4/image12.png",
+    chartImage: "/images/p5/image12.png",
     chartAlt: "Performance comparison chart — Before vs After 3D Configurator launch",
     chart: {
-      id: "project4-benchmark",
+      id: "project5-benchmark",
       alt: "Interactive performance benchmark chart comparing static catalogue and BMW X7 3D Configurator",
       labels: ["Customer Engagement", "Config Accuracy", "Conversion Rate", "Return Visits", "Sales Cycle", "Satisfaction Score"],
       series: {
@@ -71,7 +71,7 @@ const project4 = {
     sectionLabel: "Executive Summary",
     heading: "Project Overview",
     description: "The BMW X7 3D Configurator is a web-based interactive product experience commissioned to bring the vehicle customisation journey entirely online. Rather than replicating the showroom visit digitally, the platform creates a new kind of engagement allowing customers to explore every configuration variant of the BMW X7 from any device, in any location, in real time. The platform supports 9 car models, 4 body colours, 2 wheel designs, and 4 interior seat options, with full AR placement via Web AR and QR-code entry points.",
-    image: "/images/p4/image9.png",
+    image: "/images/p5/image9.png",
     imageAlt: "3D Configurator — System Architecture 4-Layer Overview",
     challenge: {
       heading: "The Challenge",
@@ -81,7 +81,7 @@ const project4 = {
     vision: {
       heading: "The Vision",
       quote: "The goal was to move beyond static product photography and deliver a spatial, interactive experience where a customer can configure their exact BMW X7 specification and place a life-size AR model in their own environment before making a purchase decision.",
-      image: "/images/p4/image11.png",
+      image: "/images/p5/image11.png",
       imageAlt: "From Static Images to Interactive 3D — challenge comparison diagram",
     },
   },
@@ -91,11 +91,11 @@ const project4 = {
     sectionLabel: "Platform Overview",
     heading: "Configuration Options & Architecture",
     description: "The configurator surfaces five independently switchable configuration dimensions — body colour, wheel style, seat material, door animation, and render resolution — all managed by a central Variant Manager and synchronised in real time across the 3D scene and UI panel via Zustand global state.",
-    configOptionsImage: "/images/p4/image3.png",
+    configOptionsImage: "/images/p5/image3.png",
     configOptionsImageAlt: "Available Configuration Options — 5 options distribution chart",
-    performanceMetricsImage: "/images/p4/image2.png",
+    performanceMetricsImage: "/images/p5/image2.png",
     performanceMetricsImageAlt: "Performance metrics — <1s render, 360°, High/Low, AR Ready",
-    architectureImage: "/images/p4/image10.png",
+    architectureImage: "/images/p5/image10.png",
     architectureImageAlt: "Detailed 4-Layer Data Flow Diagram",
     config: {
       projectName: "BMW X7 Interactive 3D Configurator",
@@ -142,36 +142,93 @@ const project4 = {
   // ── PLATFORM SCREENSHOTS ─────────────────────────────────
   screenshots: [
     {
-      title: "Exterior View — Alpine White with Customise Panel",
-      image: "/images/p4/image4.png",
+      title: "Exterior View: Alpine White with Customise Panel",
+      image: "/images/p5/image19.png",
       imageAlt: "Screenshot 1 — BMW X7 Exterior Front View, Alpine White",
       description: "The default landing state of the configurator. The user sees the BMW X7 from the front in Alpine White with the customise panel on the left offering Body, Wheels, and Seats options. The right panel displays the model name, price, and a QR code for AR viewing.",
     },
     {
-      title: "Interior View — Doors Open (White Exterior)",
-      image: "/images/p4/image5.png",
+      title: "Interior View: Doors Open (White Exterior)",
+      image: "/images/p5/image5.png",
       imageAlt: "Screenshot 2 — Doors Open Aerial View",
       description: "Triggered by the door-open animation, this aerial-angle view reveals the full interior layout with all four doors and the bonnet open simultaneously. The Three.js animation controller smoothly tweens each component independently, revealing seats, dashboard, and cabin space.",
     },
     {
-      title: "Colour Variant — Manhattan Blue with Open Doors",
-      image: "/images/p4/image6.png",
+      title: "Colour Variant: Manhattan Blue with Open Doors",
+      image: "/images/p5/image6.png",
       imageAlt: "Screenshot 3 — BMW X7 in Manhattan Blue, Doors Open",
       description: "Demonstrating the real-time colour switching capability. The user has selected Manhattan Blue from the body colour panel. The material swap is applied across the entire vehicle mesh in under one second using Three.js mesh traversal, with the door animation retained from the previous state.",
     },
     {
-      title: "Interior Camera — Red Leather Seats",
-      image: "/images/p4/image7.png",
+      title: "Interior Camera: Red Leather Seats",
+      image: "/images/p5/image7.png",
       imageAlt: "Screenshot 4 — Interior Camera, Red Leather Seats",
       description: "The camera orbits into the cabin for a first-person interior perspective. The red leather seat configuration is shown with the full dashboard and BMW iDrive system visible. Seat material swaps apply to all individual seat meshes simultaneously via the Variant Manager.",
     },
     {
-      title: "Side Profile — Manhattan Blue, Door Open, Red Interior",
-      image: "/images/p4/image8.png",
+      title: "Side Profile: Manhattan Blue, Door Open, Red Interior",
+      image: "/images/p5/image8.png",
       imageAlt: "Screenshot 5 — Side Profile, Blue Exterior, Red Interior, Door Open",
       description: "A combined configuration state: Manhattan Blue exterior with red leather seats and the driver's door open, showing the contrast between the exterior finish and interior trim. This view is reachable via free orbit control and demonstrates the depth of the customisation cross-section.",
     },
   ],
+
+  // ── LIVE DEMO ─────────────────────────────────────────────
+  liveDemo: {
+    sectionLabel: "Live Demo",
+    heading: "Platform in Action",
+    description: "The following screenshots demonstrate the live platform across its key interaction states  exterior customisation, door animation, interior view, and AR placement. Each view represents a distinct feature of the configurator as experienced by the end user.",
+    images: [
+      {
+        index: 1,
+        title: "Exterior View: Alpine White with Customise Panel",
+        image: "/images/p5/image4.png",
+        imageAlt: "Live Demo Screenshot 1 — BMW X7 Exterior Front View, Alpine White",
+        tag: "Exterior",
+        description: "The default landing state of the configurator. The user sees the BMW X7 from the front in Alpine White with the customise panel on the left offering Body, Wheels, and Seats options. The right panel displays the model name, price, and a QR code for AR viewing.",
+      },
+      {
+        index: 2,
+        title: "Interior View: Doors Open (White Exterior)",
+        image: "/images/p5/image5.png",
+        imageAlt: "Live Demo Screenshot 2 — Doors Open Aerial View",
+        tag: "Animation",
+        description: "Triggered by the door-open animation, this aerial-angle view reveals the full interior layout with all four doors and the bonnet open simultaneously. The Three.js animation controller smoothly tweens each component independently, revealing seats, dashboard, and cabin space.",
+      },
+      {
+        index: 3,
+        title: "Colour Variant: Manhattan Blue with Open Doors",
+        image: "/images/p5/image6.png",
+        imageAlt: "Live Demo Screenshot 3 — BMW X7 in Manhattan Blue, Doors Open",
+        tag: "Colour Switch",
+        description: "Demonstrating the real-time colour switching capability. The user has selected Manhattan Blue from the body colour panel. The material swap is applied across the entire vehicle mesh in under one second using Three.js mesh traversal, with the door animation retained from the previous state.",
+      },
+      {
+        index: 4,
+        title: "Interior Camera: Red Leather Seats",
+        image: "/images/p5/image7.png",
+        imageAlt: "Live Demo Screenshot 4 — Interior Camera, Red Leather Seats",
+        tag: "Interior",
+        description: "The camera orbits into the cabin for a first-person interior perspective. The red leather seat configuration is shown with the full dashboard and BMW iDrive system visible. Seat material swaps apply to all individual seat meshes simultaneously via the Variant Manager.",
+      },
+      {
+        index: 5,
+        title: "Side Profile: Manhattan Blue, Door Open, Red Interior",
+        image: "/images/p5/image8.png",
+        imageAlt: "Live Demo Screenshot 5 — Side Profile, Blue Exterior, Red Interior, Door Open",
+        tag: "Combined Config",
+        description: "A combined configuration state: Manhattan Blue exterior with red leather seats and the driver's door open, showing the contrast between the exterior finish and interior trim. This view is reachable via free orbit control and demonstrates the depth of the customisation cross-section.",
+      },
+      {
+        index: 6,
+        title: "All Doors & Bonnet Open: Graphite Gray, High Resolution",
+        image: "/images/p5/image20.png",
+        imageAlt: "Live Demo Screenshot 6 — Graphite Gray BMW X7, All Doors and Bonnet Open, Side-Rear View",
+        tag: "Full Open State",
+        description: "A full-open configuration state showing all four doors and the bonnet simultaneously open on the Graphite Gray exterior variant. Captured from a side-rear orbit angle in High Resolution mode, this view exposes the complete cabin layout, white leather interior, and engine bay demonstrating the depth of the door and bonnet animation system driven by the GSAP tween engine.",
+     },
+    ],
+  },
 
   // ── PHASES ───────────────────────────────────────────────
   phases: [
@@ -180,7 +237,7 @@ const project4 = {
       label: "Phase 1",
       title: "3D Model Setup & Scene Initialisation",
       description: "The foundation phase covers the ingestion of the BMW X7 GLTF model, scene configuration, and adaptive resolution selection. This is the technical groundwork that every subsequent phase depends upon.",
-      image: "/images/p4/image13.png",
+      image: "/images/p5/image13.png",
       imageAlt: "Phase 1 — 3D Model Setup & Scene Initialisation flow diagram",
       bullets: [
         { icon: "📦", bold: "GLTF Model Preparation:", text: "The BMW X7 3D asset was delivered in GLTF/GLB format, pre-optimised with Draco mesh compression reducing file size by up to 90% versus raw geometry." },
@@ -194,7 +251,7 @@ const project4 = {
       label: "Phase 2",
       title: "User Interaction & Variant Selection",
       description: "Phase 2 is the live configuration loop. Every time a user selects a colour, wheel, or seat option from the left-hand customise panel, the Variant Manager processes the selection and updates the 3D scene in real time.",
-      image: "/images/p4/image14.png",
+      image: "/images/p5/image14.png",
       imageAlt: "Phase 2 — User Interaction & Variant Selection flow diagram",
       bullets: [
         { icon: "🎨", bold: "Body Colour Swap:", text: "Alpine White, Manhattan Blue, Manhattan Grey, and Graphite Gray. Each colour swap traverses the scene graph and replaces the PBR material on all body panel meshes simultaneously, with specular and roughness values adjusted per colour." },
@@ -208,7 +265,7 @@ const project4 = {
       label: "Phase 3",
       title: "Door & Bonnet Animation System",
       description: "Phase 3 covers the animation subsystem that enables the exploded interior view one of the most visually impactful features of the configurator, allowing customers to inspect the cabin, dashboard, and seating layout in full detail.",
-      image: "/images/p4/image15.png",
+      image: "/images/p5/image15.png",
       imageAlt: "Phase 3 — Door & Bonnet Animation System flow diagram",
       bullets: [
         { icon: "🚪", bold: "Individual Door Control:", text: "Each of the four doors and the bonnet is independently animatable. The user triggers the open/close action via toolbar icon buttons on the right side of the viewport." },
@@ -222,7 +279,7 @@ const project4 = {
       label: "Phase 4",
       title: "AR Placement & View in Space",
       description: 'Phase 4 extends the configurator experience into the physical world via Augmented Reality. The "View in Space" button launches a full-scale AR session with the current vehicle configuration loaded, enabling the customer to place a life-size BMW X7 in their real environment.',
-      image: "/images/p4/image16.png",
+      image: "/images/p5/image16.png",
       imageAlt: "Phase 4 — AR Placement & View in Space flow diagram",
       bullets: [
         { icon: "🌍", bold: "Web AR via 8th Wall:", text: "8th Wall's WebAR SDK provides world-tracking AR entirely within the mobile browser, requiring no application install. The BMW X7 model is placed on detected horizontal surfaces and can be repositioned freely." },
@@ -236,7 +293,7 @@ const project4 = {
       label: "Phase 5",
       title: "Analytics, Performance & Delivery",
       description: "Phase 5 covers the analytics instrumentation, performance monitoring, and client delivery pipeline that wrap the live platform, providing ongoing insight into user behaviour and technical health.",
-      image: "/images/p4/image17.png",
+      image: "/images/p5/image17.png",
       imageAlt: "Phase 5 — Analytics, Performance & Delivery flow diagram",
       bullets: [
         { icon: "📊", bold: "Configuration Analytics:", text: "Every variant selection event is logged with a timestamp and session ID. This produces a ranked dataset of most-popular colours, wheel preferences, and seat choices valuable data for inventory and marketing decisions." },
@@ -251,7 +308,7 @@ const project4 = {
   techStack: {
     sectionLabel: "Technology",
     heading: "Tech Stack",
-    image: "/images/p4/image18.png",
+    image: "/images/p5/image18.png",
     imageAlt: "Technology Stack — Full Component Overview",
     items: [
       { name: "Three.js (WebGL)",        category: "3D Core",          icon: "threedotjs" },
@@ -302,4 +359,4 @@ const project4 = {
 
 };
 
-export default project4;
+export default project5;

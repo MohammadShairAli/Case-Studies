@@ -4,6 +4,8 @@ import Hero        from '../components/Hero'
 import Executive   from '../components/Executive'
 import Performance from '../components/Performance'
 import Phases      from '../components/Phases'
+import Screenshots from '../components/Screenshots'
+import LiveDemo    from '../components/LiveDemo'
 import TechStack   from '../components/TechStack'
 import ROI         from '../components/ROI'
 import { useReveal } from '../hooks/useReveal'
@@ -38,6 +40,8 @@ export default function CaseStudy({ project }) {
       <Hero        hero={project.hero} />
       <Executive   executive={project.executive} />
       <Performance performance={project.performance} />
+      <Screenshots screenshots={project.screenshots} />
+      <LiveDemo    liveDemo={project.liveDemo} />
       <Phases      phases={project.phases} />
       <TechStack   techStack={project.techStack} />
       {/* ROI section only renders if the project has roi data */}

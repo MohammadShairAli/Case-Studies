@@ -1,17 +1,17 @@
 // ============================================================
 // PROJECTS REGISTRY
 // ============================================================
-// To add a new project (e.g., Project 4):
-// 1. Create src/data/project4.js (copy an existing one and update)
+// To add a new project:
+// 1. Create src/data/projectX.js (copy an existing one and update)
 // 2. Import it below
 // 3. Add an entry to the `projects` array
-// That's it — routing, navigation, and pages are auto-generated!
+// Routing, navigation, and pages are auto-generated.
 // ============================================================
 
 import project1 from './project1';
 import project2 from './project2';
 import project3 from './project3';
-import project4 from './project4'; // ← uncomment when ready
+import project5 from './project5';
 
 const projects = [
   {
@@ -26,7 +26,10 @@ const projects = [
     slug: 'voice-agent-restaurant',
     data: project3,
   },
-  { slug: '3d-configurator', data: project4 }, // ← add next project here
+  {
+    slug: '3d-configurator',
+    data: project5,
+  },
 ];
 
 export default projects;
