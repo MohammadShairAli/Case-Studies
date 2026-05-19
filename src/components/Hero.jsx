@@ -111,8 +111,8 @@ export default function Hero({ hero }) {
       <div className="max-w-container mx-auto w-full relative z-10">
 
         <div className={`
-          grid gap-10 lg:gap-12 items-center
-          ${hero.featureImage ? 'lg:grid-cols-[minmax(0,0.95fr)_minmax(420px,1.05fr)]' : 'grid-cols-1'}
+          grid gap-6 sm:gap-8 md:gap-10 lg:gap-12 items-center
+          ${hero.featureImage ? 'grid-cols-1 md:grid-cols-2 lg:grid-cols-[minmax(0,0.95fr)_minmax(420px,1.05fr)]' : 'grid-cols-1'}
         `}>
           {/* Text block */}
           <div className="max-w-full md:max-w-[680px] animate-up opacity-0">
@@ -159,15 +159,17 @@ export default function Hero({ hero }) {
           </div>
 
           {hero.featureImage && (
-            <div className="animate-up opacity-0 delay-1 hidden lg:block">
+            <div className="animate-up opacity-0 delay-1 w-full">
               <div className="
                 rounded-md overflow-hidden bg-surface border border-border
-                shadow-[0_24px_70px_rgba(11,61,102,0.14)]
+                shadow-[0_8px_24px_rgba(11,61,102,0.08)]
+                sm:shadow-[0_16px_48px_rgba(11,61,102,0.1)]
+                lg:shadow-[0_24px_70px_rgba(11,61,102,0.14)]
               ">
                 <img
                   src={hero.featureImage}
                   alt={hero.featureImageAlt || hero.heading}
-                  className="w-full h-auto object-contain"
+                  className="w-full h-auto object-cover md:object-contain"
                 />
               </div>
             </div>
