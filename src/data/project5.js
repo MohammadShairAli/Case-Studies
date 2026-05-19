@@ -16,6 +16,8 @@ const project5 = {
     heading: "BMW X7 3D Configurator",
     subheading: "Interactive Customisation & AR Platform",
     description: "The BMW X7 3D Configurator is a fully browser-based interactive product experience built on Three.js and WebGL. Customers configure a photorealistic 3D model of the BMW X7 in real time switching body colours, wheel styles, and seat materials then visualise their personalised build in Augmented Reality directly from their browser, with no app download required.",
+    featureImage: "/images/p5/image21.png",
+    featureImageAlt: "BMW X7 3D configurator interface showing the vehicle customisation screen",
     bannerImage: "/images/p5/image1.png",
     stats: [
       { value: "<1s",    label: "Render Latency" },
