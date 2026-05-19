@@ -64,6 +64,8 @@ export default function Navbar({ project }) {
   const navLinks = [
     { href: '#overview',    label: 'Overview' },
     { href: '#performance', label: 'Benchmarks' },
+    ...(project.screenshots?.length ? [{ href: '#screenshots', label: 'Screens' }] : []),
+    ...(project.liveDemo?.images?.length ? [{ href: '#demo', label: 'Demo' }] : []),
     { href: '#phases',      label: 'Process' },
     { href: '#tech',        label: 'Tech Stack' },
     ...(project.roi ? [{ href: '#roi', label: 'ROI Summary' }] : []),
