@@ -110,8 +110,12 @@ export default function Hero({ hero }) {
 
       <div className="max-w-container mx-auto w-full relative z-10">
 
-        {/* Text block */}
-        <div className="max-w-full md:max-w-[680px] animate-up opacity-0">
+        <div className={`
+          grid gap-10 lg:gap-12 items-center
+          ${hero.featureImage ? 'lg:grid-cols-[minmax(0,0.95fr)_minmax(420px,1.05fr)]' : 'grid-cols-1'}
+        `}>
+          {/* Text block */}
+          <div className="max-w-full md:max-w-[680px] animate-up opacity-0">
 
           <span className="
             inline-block text-[0.7rem] sm:text-[0.75rem]
@@ -152,6 +156,22 @@ export default function Hero({ hero }) {
           >
             View Case Study ↓
           </a>
+          </div>
+
+          {hero.featureImage && (
+            <div className="animate-up opacity-0 delay-1 hidden lg:block">
+              <div className="
+                rounded-md overflow-hidden bg-surface border border-border
+                shadow-[0_24px_70px_rgba(11,61,102,0.14)]
+              ">
+                <img
+                  src={hero.featureImage}
+                  alt={hero.featureImageAlt || hero.heading}
+                  className="w-full h-auto object-contain"
+                />
+              </div>
+            </div>
+          )}
         </div>
 
         {/* Stats grid */}
