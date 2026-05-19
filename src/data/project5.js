@@ -57,8 +57,8 @@ const project5 = {
         ],
       },
       annotations: [
-        { type: "before", title: "Static catalogue", subtitle: "Low engagement", x: 82, y: 330, width: 190 },
-        { type: "after",  title: "3D Configurator",  subtitle: "94% satisfaction score", x: 900, y: 352, width: 230 },
+        { type: "before", title: "Static catalogue", subtitle: "Low engagement", x: 98, y: 280, width: 200 },
+        { type: "after",  title: "3D Configurator",  subtitle: "94% satisfaction score", x: 850, y: 80, width: 200 },
       ],
     },
     metrics: [
